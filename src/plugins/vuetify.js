@@ -59,7 +59,7 @@ export default createVuetify(
       configFile: './src/styles/settings.scss',
     },
     theme: {
-      defaultTheme: 'dark',
+      defaultTheme: 'system',
       themes: {
         dark: {
           colors: {
