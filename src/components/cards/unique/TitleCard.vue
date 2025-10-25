@@ -1,6 +1,7 @@
 <template>
   <FeatureCard
     i18n-key="title"
+    max-height="90vh"
   >
   <template #title><span/></template>
   <template #description><span/></template>
@@ -10,11 +11,13 @@
      <template #default="{parseMarkdownToHtml : parse, item : i18nItem}">
     <v-card-text class="w-80 text-center ">
       <v-row class="mb-4">
-        <v-col>
+        <v-col class="">
           <div class="image-container">
             <v-img
               src="@/assets/title-card-image.png"
-              sizes="50% 50%"
+              contain
+              height="100%"
+              width="100%"
             />
           </div>
         </v-col>
@@ -66,10 +69,13 @@ export default {
 
 <style lang="css" scoped>
 .image-container {
-  /* max-height: 50vh; */
-  object-fit: cover;
-  overflow: hidden;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 .title-card {
   /* max-height: calc(100vh - 120px); */
   display: flex;
