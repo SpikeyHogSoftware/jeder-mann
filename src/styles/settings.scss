@@ -1,0 +1,78 @@
+@use "vuetify/settings" as *;
+
+$success: #388e3c;
+$border-color: rgb(36, 119, 120, 0.3);
+$shadow-color: rgba(36, 119, 120, 0.2);
+
+// Box-shadow format: offset-x offset-y blur-radius spread-radius color
+//     - offset-x and offset-y: move the shadow horizontally/vertically
+//     - blur-radius: how much the shadow blurs, making the shadow larger and softer
+//     - spread-radius: the size expansion/contraction of the shadow
+//     - color: the shadow's color (here using Vuetify CSS vars with SCSS fallback)
+
+// Sensible material-elevation inspired box-shadows for v-card
+
+.v-card--variant-elevated {
+  box-shadow:
+    0 2px 8px 4px var(--v-shadow-key-umbra-opacity, $shadow-color),      // low/primary shadow: gentle lift
+    0 1.5px 5px 0px var(--v-shadow-key-penumbra-opacity, $shadow-color), // soft penumbra: subtle diffusion
+    0 0.5px 1.5px 0px var(--v-shadow-key-ambient-opacity, $shadow-color); // faint ambient
+}
+
+// Slightly stronger shadow on hover for "pop" effect
+.v-card.v-card--variant-elevated:hover:not(.v-card--flat) {
+  box-shadow:
+    8px 12px 12px -4px var(--v-shadow-key-umbra-opacity, $border-color),
+    12px 16px 20px 0px var(--v-shadow-key-penumbra-opacity, $border-color),
+    4px 16px 32px 0px var(--v-shadow-key-ambient-opacity, $border-color) !important;
+}
+
+.v-card--flat {
+  box-shadow: none !important;
+  border: none;
+}
+
+
+
+.v-card-title,
+.v-card-subtitle {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  line-height: 1.2;
+  text-align: center;
+}
+.wrap-text {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
+  line-height: 1.2;
+}
+.text-wrap {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.w-80 {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: disc;
+  list-style: outside;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 2em;
+}
+ul li {
+  display: list-item;
+  text-align: start;
+}
+
+ul li::marker, ol li::marker {
+  color: rgb(var(--v-theme-accent)); /* Your primary color from vuetify.js */
+}
