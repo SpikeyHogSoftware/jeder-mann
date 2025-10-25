@@ -1,14 +1,19 @@
 const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
-  publicPath : "jeder-mann-frontend",
+  
+  publicPath: process.env.NODE_ENV === 'production' ? '/jeder-mann/' : '/',
+  pages: {
+    index: {
+      title: 'Walk-Man',
+      entry: 'src/main.js',
+    }
+  },
   devServer: {
     host: '0.0.0.0',
-    allowedHosts: 'all',
-    client: { webSocketURL: 'auto://0.0.0.0:0/ws' }
+    allowedHosts: 'all'
   },
   chainWebpack: config => {
-    
     config.module
     .rule('markdown')
     .test(/\.md$/)

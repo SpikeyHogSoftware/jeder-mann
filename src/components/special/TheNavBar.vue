@@ -177,6 +177,9 @@ export default {
     logo() {
       return this.$vuetify.theme.current.name === "dark" ? "logo-wide-dark.png" : "logo-wide.png";
     },
+    publicPath() {
+      return process.env.NODE_ENV === 'production' ? '/jeder-mann/' : '/';
+    },
   },
   methods: {
     scrollTo(section) {
@@ -192,12 +195,12 @@ export default {
         window.scrollTo({ top: scrollTo, behavior: "smooth" });
       } else {
         // if we're already on the home page, do nothing
-        if (window.location.pathname === "/") {
+        if (window.location.pathname === this.publicPath) {
           return;
         }
         // if the element is not found, got to home page
         // then try again to scroll to the element
-        this.$router.push("/").then(() => {
+        this.$router.push(this.publicPath).then(() => {
           this.scrollTo(section);
         });
       }
@@ -220,10 +223,10 @@ export default {
     },
     handleBrandClick() {
       // if on home page, scroll to top
-      if (window.location.pathname === "/") {
+      if (window.location.pathname === this.publicPath) {
         window.scrollTo({ top: 0, behavior: "smooth" });
       } else {
-        this.$router.push("/");
+        this.$router.push(this.publicPath);
       }
     },
   },
