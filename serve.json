@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/jeder-mann/**", "destination": "index.html" }
+  ]
+}
