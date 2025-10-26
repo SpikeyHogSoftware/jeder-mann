@@ -1,7 +1,7 @@
 <template>
   <v-card
-    
-    class="flip-card fill-height d-flex flex-column justify-space-between"
+    height="100%"
+    class="d-flex flex-column justify-space-around mx-1 pb-5"
     @click="if (switchOnClick) toggleFlipState();"
     @mouseenter="if (switchOnHover) toggleFlipState();"
     @mouseleave="if (switchOnHover) toggleFlipState();"

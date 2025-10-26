@@ -3,7 +3,6 @@
     <template #="{ parseMarkdownToHtml: parse, items }">
       <v-card-text
         v-if="items"
-        :class="{ 'pa-0 ma-0 pb-2': $vuetify.display.mobile }"
       >
         <v-row>
           <v-col
@@ -17,7 +16,6 @@
               :switch-on-hover="!$vuetify.display.mobile"
               :switch-on-click="$vuetify.display.mobile"
               :variant="$vuetify.display.mobile ? 'append' : 'fade'"
-              style="width: 100% !important"
             >
               <template #prepend>
                 <v-card-title class="text-card-title-text">

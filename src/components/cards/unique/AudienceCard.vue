@@ -24,7 +24,7 @@
           </v-col>
         </v-row>
       </v-card-actions>
-      <v-card-text class="pa-0 px-1 ma-0 mx-1">
+      <v-card-text >
       
         <v-window
           v-model="window"
