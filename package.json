@@ -7,7 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
-    "deploy": "gh-pages -d dist"
+    "deploy": "vue-cli-service build & gh-pages -d dist --repo https://github.com/SpikeyHogSoftware/jeder-mann"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

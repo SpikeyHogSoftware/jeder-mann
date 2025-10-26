@@ -31,13 +31,14 @@
         >
           {{ $t("contact.phone_button_text") }}
         </v-list-item>
-        <v-list-item
+        <!-- <v-list-item
           prepend-icon="mdi-whatsapp"
           @click="handleWhatsappClick"
           key="whatsapp"
         >
           {{ $t("contact.whatsapp_button_text") }}
-        </v-list-item></v-list
+        </v-list-item> -->
+        </v-list
       >
     </v-speed-dial>
   </v-fab>
