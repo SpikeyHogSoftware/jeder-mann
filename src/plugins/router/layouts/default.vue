@@ -4,9 +4,7 @@
     <v-container v-if="!$vuetify.display.mobile" class="pt-0 mt-0 fill-height fluid text-generic">
       <router-view />
     </v-container>
-    <v-container v-else class="py-0 my-0 custom-padding fill-height  text-generic">
-      <router-view />
-    </v-container>
+      <router-view v-else />
   </v-main>
   <TheFooter />
   <BackToTopButton />

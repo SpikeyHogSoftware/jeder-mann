@@ -1,14 +1,14 @@
 <template>
-  <v-container :class="{'pa-0 ma-0': $vuetify.display.mobile}">
-        <v-row><v-col><TitleCard id="title-card" /></v-col></v-row>
-        <v-row><v-col><BenefitsCard id="benefits-card"/></v-col></v-row>
-        <v-row><v-col><AudienceCard id="audience-card"/></v-col></v-row>
-        <v-row><v-col><OffersCard id="offers-card"/></v-col></v-row>
-        <v-row><v-col><MethodsCard id="methods-card"/></v-col></v-row>
-        <v-row><v-col><TestimonialsCarousel id="testimonials-card"/></v-col></v-row>
-        <v-row><v-col><PricingCard id="pricing-card"/></v-col></v-row>
-        <v-row><v-col><FAQCard id="faq-card"/></v-col></v-row>
-  </v-container>
+  <div class="d-flex flex-column fill-height ma-0 pa-0 custom-container">
+        <TitleCard class="my-4 mt-0 " id="title-card" />
+        <BenefitsCard class="my-4 " id="benefits-card"/>
+        <AudienceCard class="my-4 " id="audience-card"/>
+        <OffersCard class="my-4 " id="offers-card"/>
+        <MethodsCard class="my-4 " id="methods-card"/>
+        <TestimonialsCarousel class="my-4 " id="testimonials-card"/>
+        <PricingCard class="my-4 " id="pricing-card"/>
+        <FAQCard class="my-4" id="faq-card"/>
+  </div>
   
   <CTAFAButton 
   v-if="$vuetify?.display?.mobile"
@@ -77,3 +77,5 @@ export default {
   },
 };
 </script>
+<style scoped>
+</style>

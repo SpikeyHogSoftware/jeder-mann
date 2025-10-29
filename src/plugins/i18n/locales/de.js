@@ -50,7 +50,7 @@ export default {
       },
       {
         title: "Selbststeuerung",
-        description: `Durch diverse Methoden und Ziele ermöglicht das Konzept von Walk-Man nicht das ist bloße Reden über Gefühle, sondern ein strategisches Denken über dich selbst.`,
+        description: `Durch diverse Methoden und Ziele ermöglicht das Konzept von Walk-Man nicht nur das bloße Reden über Gefühle, sondern auch ein strategisches Denken über sich selbst`,
         icon: "custom:selbststeuerung",
       },
       // füge weitere 'items' hinzu, wenn du mehr Vorteile hast
@@ -182,8 +182,12 @@ Diese Erweiterungen sind freiwillig und werden nur eingesetzt, wenn von Ihnen ge
     items: [
       {
         name: "Zukünftige Feedbacks der Kunden",
-        text: "Sobald die Ersten eingetroffen werden diese ergänzt.",
+        // text: "Sobald die Ersten eingetroffen werden diese ergänzt.",
       },
+      // {
+      //   name: "Zukünftige Feedbacks der Kunden",
+      //   // text: "Sobald die Ersten eingetroffen werden diese ergänzt.",
+      // },
       // füge weitere 'items' hinzu, wenn du welche hast
       // {
       //   name : "",
@@ -361,6 +365,7 @@ auch bei ungünstiger Witterung erhalten bleiben.`,
     submit: "Senden",
     reset: "Abbrechen",
     email_address: "info.walk-man{'@'}web.de",
+    email_button_text: "Schreiben Sie uns",
     phone_number: "+49 (0) 30 12345678",
     phone_button_text: "Rufen Sie uns an",
     whatsapp_button_text: "Schreiben Sie uns",

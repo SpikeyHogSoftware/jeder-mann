@@ -30,7 +30,7 @@ npm run serve
 - **Vuex** - State management
 - **Vue i18n** - Internationalization
 - **Sass** - CSS preprocessor
-- **EmailJS** - Email service integration (deactivated for now)
+- ~~**EmailJS** - Email service integration (deactivated for now)~~
 
 ## 📁 Project Structure
 

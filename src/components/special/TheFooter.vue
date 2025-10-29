@@ -2,9 +2,11 @@
   <v-divider
     color="accent"
     opacity="1"
+    v-if="!$vuetify.display.mobile"
   />
   <v-footer
     class="text-center"
+    :class="{'mt-4': $vuetify.display.mobile}"
     id="the_footer"
   >
     <v-row justify="space-between">

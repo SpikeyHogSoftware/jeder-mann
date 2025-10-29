@@ -6,10 +6,14 @@
     location="right bottom"
     variant="outlined"
     size="x-large"
+    href="mailto:{{ $t('contact.email_address') }}"
+    target="_blank"
+    rel="noopener noreferrer"
     color="mobile_cta_fab_color"
   >
-    <v-icon size="x-large">mdi-message-text-outline</v-icon>
-    <v-speed-dial
+    <!-- <v-icon size="x-large">mdi-message-text-outline</v-icon> -->
+    <v-icon size="x-large">mdi-email-outline</v-icon>
+    <!-- <v-speed-dial
       direction="up"
       activator="parent"
       location="right bottom"
@@ -19,28 +23,23 @@
       <v-list base-color="accent">
         <v-list-item
           prepend-icon="mdi-email"
-          :to="'/contact'"
+          href="mailto:{{ $t('contact.email_address') }}"
+          target="_blank"
+          rel="noopener noreferrer"
           key="email"
         >
-          {{ $t("cta_button_text") }}
-        </v-list-item>
+          {{ $t("contact.email_button_text") }}
+        </v-list-item> 
         <v-list-item
-          prepend-icon="mdi-phone"
-          @click="handlePhoneClick"
-          key="phone"
-        >
-          {{ $t("contact.phone_button_text") }}
-        </v-list-item>
-        <!-- <v-list-item
           prepend-icon="mdi-whatsapp"
           @click="handleWhatsappClick"
           key="whatsapp"
         >
           {{ $t("contact.whatsapp_button_text") }}
-        </v-list-item> -->
+        </v-list-item>
         </v-list
       >
-    </v-speed-dial>
+    </v-speed-dial> -->
   </v-fab>
 </template>
 
